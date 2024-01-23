@@ -3,9 +3,10 @@ local range = 99e9
 
 --Variable--
 local player = game:GetService("Players").LocalPlayer
-
+getgenv().clicktouch = true
 --Script--
-game:GetService("RunService").RenderStepped:Connect(function()
+while task.wait() do
+if getgenv().clicktouch then
     local p = game.Players:GetPlayers()
     for i = 2, #p do local v = p[i].Character
         if v and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 and v:FindFirstChild("HumanoidRootPart") and player:DistanceFromCharacter(v.HumanoidRootPart.Position) <= range then
@@ -20,6 +21,20 @@ game:GetService("RunService").RenderStepped:Connect(function()
                 end
             end
         end
+end
     end
 end
-end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
